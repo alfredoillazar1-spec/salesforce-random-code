@@ -1,0 +1,8 @@
+<template>
+    <lightning-card>
+        <label>This is Parent</label>
+        <lightning-button onclick={handleClick} label="Pass data to child"></lightning-button>
+            <p>Data from child {childData}</p>
+            <c-child-component parent-data={data} onsendbackthedata={handleChildData}></c-child-component>
+    </lightning-card>
+</template>

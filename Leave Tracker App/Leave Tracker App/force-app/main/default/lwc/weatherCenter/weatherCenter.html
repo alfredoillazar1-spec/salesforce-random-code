@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Weather details">
+        <lightning-input type="text" label="Enter City Name" onchange={handleInputChange}></lightning-input>
+        <lightning-button label="Get Weather Details" onclick={handleWeatherDetails}></lightning-button>
+
+
+        <template lwc:if={showWeatherDetails}>
+            <lightning-layout multiple-rows>
+                <lightning-layout-item size="6" small-device-size="12" padding="around-small">
+                    <p>City: {weatherDetails.city}</p>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" small-device-size="12" padding="around-small">
+                    <p>Temperature: {weatherDetails.temperature}</p>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" small-device-size="12" padding="around-small">
+                    <p>Pressure: {weatherDetails.pressure}</p>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" small-device-size="12" padding="around-small">
+                    <p>Humidity: {weatherDetails.humidity}</p>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" small-device-size="12" padding="around-small">
+                    <p>Feels like: {weatherDetails.feelsLike}</p>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" small-device-size="12" padding="around-small">
+                    <p>Minimum temperature: {weatherDetails.tempMin}</p>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" small-device-size="12" padding="around-small">
+                    <p>Maximum temperature: {weatherDetails.tempMax}</p>
+                </lightning-layout-item>
+            </lightning-layout>
+        </template>
+    </lightning-card>
+</template>
